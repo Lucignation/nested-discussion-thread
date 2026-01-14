@@ -90,28 +90,28 @@ export class CommentService {
         id: '1',
         parentId: null,
         content: 'This is the root comment of our discussion thread. It demonstrates how we can build infinitely nested conversations.',
-        author: 'Alice',
+        author: 'Faith',
         createdAt: '2024-01-10T10:00:00Z'
       },
       {
         id: '2',
         parentId: '1',
         content: 'Great point! I have a follow-up question about the implementation details...',
-        author: 'Bob',
+        author: 'Olumide',
         createdAt: '2024-01-10T10:05:00Z'
       },
       {
         id: '3',
         parentId: '2',
         content: 'Let me answer that. The key is using a recursive component structure.',
-        author: 'Charlie',
+        author: 'Tunde',
         createdAt: '2024-01-10T10:10:00Z'
       },
       {
         id: '4',
         parentId: '3',
         content: 'Thanks for clarifying! This makes a lot of sense now.',
-        author: 'Bob',
+        author: 'Ayo',
         createdAt: '2024-01-10T10:15:00Z'
       },
       {
@@ -125,14 +125,14 @@ export class CommentService {
         id: '6',
         parentId: '1',
         content: 'Another top-level reply here, starting a different branch of the conversation.',
-        author: 'Eve',
+        author: 'Dammy',
         createdAt: '2024-01-10T10:25:00Z'
       },
       {
         id: '7',
         parentId: '6',
         content: 'Nested under Eve\'s comment, this demonstrates parallel conversation threads.',
-        author: 'Frank',
+        author: 'Paul',
         createdAt: '2024-01-10T10:30:00Z'
       },
     ];
