@@ -2,11 +2,11 @@
 
 A deeply-nested discussion thread with optimistic UI updates and robust state management.
 
-## 🎯 Project Overview
+## Project Overview
 
 This system handles infinitely nested comment threads with real-time optimistic updates, providing users with instant feedback while maintaining data integrity with the server.
 
-## 🏗️ Architecture
+## Architecture
 
 ### Core Design Principles
 
@@ -267,7 +267,7 @@ worker.onmessage = (e) => setCommentTree(e.data);
 - Rendering 100+ levels deep
 - Memory usage monitoring
 
-## 🚀 Running the Application
+## Running the Application
 
 ```bash
 # Install dependencies
