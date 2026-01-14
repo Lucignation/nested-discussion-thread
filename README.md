@@ -15,24 +15,8 @@ This system handles infinitely nested comment threads with real-time optimistic 
 3. **Immutable State Management**: Predictable state updates using React best practices
 4. **Scalable Data Structures**: Efficient algorithms for tree operations
 
-### File Structure
 
-```
-src/
-├── components/
-│   ├── CommentItem.tsx          # Recursive comment renderer
-│   └── DiscussionThread.tsx     # Main container component
-├── services/
-│   └── CommentService.ts        # API/data layer abstraction
-├── utils/
-│   └── TreeBuilder.ts           # Tree construction algorithms
-├── types/
-│   └── Comment.ts               # TypeScript interfaces
-└── hooks/
-    └── useOptimisticComments.ts # Custom hook for state management
-```
-
-## 📊 Data Model
+## Data Model
 
 ### Recursive Data Structure
 
@@ -76,7 +60,7 @@ buildTree(comments: Comment[]): CommentNode[] {
 
 **Complexity**: O(n) time, O(n) space
 
-## 🔄 Optimistic Mutation Strategy
+## Optimistic Mutation Strategy
 
 ### Add Comment Flow
 
@@ -129,7 +113,7 @@ setComments(prev =>
 setComments(prev => prev.filter(c => c.id !== deletedId));
 ```
 
-## ⚡ Optimization Strategies
+## Optimization Strategies
 
 ### Current Implementation (< 1000 comments)
 
@@ -271,12 +255,7 @@ worker.onmessage = (e) => setCommentTree(e.data);
 | Incremental | < 1ms     | < 5ms          | < 10ms         |
 | Combined | < 1ms        | < 5ms          | < 10ms         |
 
-## 🧪 Testing Strategy
-
-### Unit Tests
-- Tree building algorithm correctness
-- Optimistic update logic
-- Rollback mechanisms
+## Testing Strategy
 
 ### Integration Tests
 - Add comment at various nesting levels
@@ -304,7 +283,7 @@ npm run build
 npm test
 ```
 
-## 🔧 Technical Decisions
+## Technical Decisions
 
 ### Why React?
 - Efficient reconciliation for tree updates
@@ -328,7 +307,7 @@ npm test
 - No server setup required for demo
 - Real implementation would use REST/GraphQL API
 
-## 📈 Future Enhancements
+## Future Enhancements
 
 1. **Real-time Updates**: WebSocket integration for live comments
 2. **Conflict Resolution**: Handle concurrent edits from multiple users
@@ -339,14 +318,10 @@ npm test
 7. **Threading Controls**: Collapse/expand branches
 8. **Performance Monitoring**: Track render times and bottlenecks
 
-## 🎓 Key Takeaways
+## Key Takeaways
 
 1. **Flat data + tree transformation** is the most flexible approach
 2. **Optimistic updates** require careful rollback planning
 3. **Virtualization** is essential for large datasets
 4. **Incremental updates** beat full recalculation at scale
 5. **User experience** trumps architectural purity
-
-## 📝 License
-
-MIT
